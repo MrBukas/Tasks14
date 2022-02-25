@@ -1,0 +1,25 @@
+public Iterator<E> iterator() {
+        //Single line comment
+        return new Iterator<E>() {
+            Node<E> current = head;//end of line comment
+            @Override
+            public boolean hasNext() {
+                return !isEmpty();
+            }
+
+            /* multiline
+            comment
+             */
+            @Override
+            /* multiline
+            comment2*/
+            public E next() {//comment
+                E value = current.value;
+                //asa
+                current = current.next;
+                return value;
+            }
+        };
+    }  /* Last multiline
+            comment
+             */
